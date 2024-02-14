@@ -36,22 +36,22 @@ fi
 # load functions, local first
 #
 if  [[ -f ${BASH_SOURCE}-jobs ]]; then source ${BASH_SOURCE}-jobs;
-	elif  [[ -f /usr/lib/armbian-config/jobs.sh ]]; then source /usr/lib/armbian-config/jobs.sh;
+	elif  [[ -f /usr/lib/debian/jobs.sh ]]; then source /usr/lib/debian/jobs.sh;
 	else exit 1;
 fi
 
 if  [[ -f ${BASH_SOURCE}-submenu ]]; then source ${BASH_SOURCE}-submenu;
-	elif  [[ -f /usr/lib/armbian-config/submenu.sh ]]; then source /usr/lib/armbian-config/submenu.sh;
+	elif  [[ -f /usr/lib/debian/submenu.sh ]]; then source /usr/lib/debian/submenu.sh;
 	else exit 1;
 fi
 
 if  [[ -f ${BASH_SOURCE}-functions ]]; then source ${BASH_SOURCE}-functions;
-	elif  [[ -f /usr/lib/armbian-config/functions.sh ]]; then source /usr/lib/armbian-config/functions.sh;
+	elif  [[ -f /usr/lib/debian/functions.sh ]]; then source /usr/lib/debian/functions.sh;
 	else exit 1;
 fi
 
 if  [[ -f ${BASH_SOURCE}-functions-network ]]; then source ${BASH_SOURCE}-functions-network;
-	elif  [[ -f /usr/lib/armbian-config/functions-network.sh ]]; then source /usr/lib/armbian-config/functions-network.sh;
+	elif  [[ -f /usr/lib/debian/functions-network.sh ]]; then source /usr/lib/debian/functions-network.sh;
 	else exit 1;
 fi
 
@@ -135,7 +135,7 @@ do
 
 if [[ -z $main ]]; then
 	exec 3>&1
-	main=$(dialog --colors --backtitle "$BACKTITLE" --title " armbian-config " --clear \
+	main=$(dialog --colors --backtitle "$BACKTITLE" --title " debian " --clear \
 	--cancel-label "Exit" --menu "\n$MENUTITLE \n$FREQENCIES\nSupport: \Z1https://forum.armbian.com\Z0\n " \
 	$LISTLENGTH ${TITLELENGTH} $BOXLENGTH "${LIST[@]}" 2>&1 1>&3)
 	exit_status=$?

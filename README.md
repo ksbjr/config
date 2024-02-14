@@ -1,4 +1,4 @@
-NOTICE: We are refactoring this tool. [Your input & help is more then welcome!](https://forum.armbian.com/topic/16933-armbian-config-rfc-ideas)
+NOTICE: We are refactoring this tool. [Your input & help is more then welcome!](https://forum.armbian.com/topic/16933-debian-rfc-ideas)
 
 # Armbian configuration utility
 
@@ -7,7 +7,7 @@ It comes with Armbian by default.
 
 Login as root and type:
 
-	armbian-config
+	debian
 
 ![](images/animated.gif)
 
@@ -69,7 +69,7 @@ Login as root and type:
         sudo chmod go+r /usr/share/keyrings/armbian.gpg
         sudo echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/armbian.gpg] http://apt.armbian.com $(lsb_release -cs) main  $(lsb_release -cs)-utils  $(lsb_release -cs)-desktop" | sudo tee /etc/apt/sources.list.d/armbian.list
         apt update
-        apt install armbian-config
+        apt install debian
 
 Development version:
 

@@ -606,7 +606,7 @@ function jobs ()
 
 						sed -i 's/.bridge=.*/bridge=br0/' /etc/hostapd.conf
 						if [[ $DEFAULT_ADAPTER == "br0" ]]; then NEW_DEFAULT_ADAPTER="eth0"; else NEW_DEFAULT_ADAPTER="$DEFAULT_ADAPTER"; fi
-						echo -e "#bridged wireless for hostapd by armbian-config\n" > $TEMP_CONF
+						echo -e "#bridged wireless for hostapd by debian\n" > $TEMP_CONF
 						echo -e "auto lo br0\niface lo inet loopback" >> $TEMP_CONF
 						echo -e "\nauto $NEW_DEFAULT_ADAPTER\nallow-hotplug $NEW_DEFAULT_ADAPTER\niface $NEW_DEFAULT_ADAPTER inet manual" >> $TEMP_CONF
 						echo -e "\nauto $WIRELESS_ADAPTER\nallow-hotplug $WIRELESS_ADAPTER\niface $WIRELESS_ADAPTER inet manual\n" >> $TEMP_CONF

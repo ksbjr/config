@@ -295,7 +295,7 @@ function description
 		*updates*)
 			echo "Display number of available updates"
 		;;
-		*armbian-config*)
+		*debian*)
 			echo "Show command for system configuration"
 		;;
 		*autoreboot-warn*)
@@ -355,7 +355,7 @@ function generic_select()
 
 
 #
-# reload kernel, bsp and armbian-config
+# reload kernel, bsp and debian
 #
 function reload_bsp(){
 

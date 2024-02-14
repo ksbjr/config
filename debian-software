@@ -56,26 +56,26 @@
 # load functions, local first
 #
 if  [[ -f debian-config-jobs ]]; then source debian-config-jobs;
-	elif  [[ -f /usr/lib/armbian-config/jobs.sh ]]; then \
-	source /usr/lib/armbian-config/jobs.sh;
+	elif  [[ -f /usr/lib/debian/jobs.sh ]]; then \
+	source /usr/lib/debian/jobs.sh;
 	else exit 1;
 fi
 
 if  [[ -f debian-config-submenu ]]; then source debian-config-submenu;
-	elif  [[ -f /usr/lib/armbian-config/submenu.sh ]]; then \
-	source /usr/lib/armbian-config/submenu.sh;
+	elif  [[ -f /usr/lib/debian/submenu.sh ]]; then \
+	source /usr/lib/debian/submenu.sh;
 	else exit 1;
 fi
 
 if  [[ -f debian-config-functions ]]; then source debian-config-functions;
-	elif  [[ -f /usr/lib/armbian-config/functions.sh ]]; then \
-	source /usr/lib/armbian-config/functions.sh;
+	elif  [[ -f /usr/lib/debian/functions.sh ]]; then \
+	source /usr/lib/debian/functions.sh;
 	else exit 1;
 fi
 
 if  [[ -f debian-config-functions-network ]]; then source debian-config-functions-network;
-	elif  [[ -f /usr/lib/armbian-config/functions-network.sh ]]; then \
-	source /usr/lib/armbian-config/functions-network.sh;
+	elif  [[ -f /usr/lib/debian/functions-network.sh ]]; then \
+	source /usr/lib/debian/functions-network.sh;
 	else exit 1;
 fi
 
